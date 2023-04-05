@@ -31,13 +31,8 @@ export const WordMening = ({ themeActive }) => {
           keyboard
           <span className="Main-span">/ˈkiːbɔːd/</span>
         </h2>
-        <button>
-          <Icons
-            name="icon-play"
-            clase="Main-iconPlay"
-            width="48"
-            height="48"
-          />
+        <button className="Main-button-play">
+          <img src="assets/images/icon-play.svg" alt="icon-play" />
         </button>
       </header>
       <section className="Main-section">
