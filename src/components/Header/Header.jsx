@@ -18,13 +18,7 @@ export const Logo = () => {
   return (
     <h1 className="Header-h1">
       <a href="#" className="Header-a">
-<<<<<<< HEAD
-        <span>
-          <Icons name="icon-logo" width="28.05" height="32" />
-        </span>
-=======
         <img src="/public/assets/images/logo.svg" alt="logo" />
->>>>>>> christh-peralta
       </a>
     </h1>
   );
