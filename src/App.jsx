@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.scss";
 import { Header } from "./components/Header/Header";
+import { Main } from "./components/Main/Main";
 
 function App() {
   const [themeActive, setThemeActive] = useState(false);
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className={`App ${themeActive ? "darkTheme" : ""}`}>
       <Header handleToggle={handleToggle} themeActive={themeActive} />
+      <Main themeActive={themeActive} />
     </div>
   );
 }

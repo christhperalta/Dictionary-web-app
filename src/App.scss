@@ -1,11 +1,14 @@
 .App {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  margin: auto;
   // max-width: 90rem;
-  padding-top: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 1.5rem;
   background-color: var(--eighth-color);
   transition: all 0.3s ease-in;
+  font-family: "Lora", serif;
 }
 
 .darkTheme {
@@ -13,3 +16,7 @@
   color: var(--eighth-color);
   transition: all 0.3s ease-in-out;
 }
+
+// font-family: 'Inconsolata', monospace;
+// font-family: 'Inter', sans-serif;
+// font-family: 'Lora', serif;

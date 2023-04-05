@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Icons } from "../Icons/Icons";
 import "./Header.scss";
 
 export const Header = ({ handleToggle, themeActive }) => {
@@ -18,7 +19,9 @@ export const Logo = () => {
   return (
     <h1 className="Header-h1">
       <a href="#" className="Header-a">
-        <img className="Header-img" src="assets/images/logo.svg" alt="logo" />
+        {/* <img className="Header-img" src="assets/images/logo.svg" alt="logo" />
+         */}
+        <Icons name="icon-logo" width="28.05" height="32" />
       </a>
     </h1>
   );
@@ -34,10 +37,12 @@ export const DropDown = ({ themeActive }) => {
     <div className="Header-dropdown">
       <button className="Header-dropdown-button" onClick={handleToggle}>
         Mono
-        <Icon
+        <Icons
           name="icon-arrow"
           clase={`Header-arrowSvg ${isActive ? "isActive" : ""}`}
           color={themeActive ? "#A445ED" : "#838383"}
+          width="12"
+          height="6"
         />
       </button>
 
@@ -71,48 +76,13 @@ export const ToggleSwitch = ({ handleToggle, themeActive }) => {
           className={`Header-slider ${themeActive ? "isActive" : ""}`}
         ></span>
       </label>
-      <Icon
+      <Icons
         clase="Header-themes-svg"
         name="icon-moon"
         color={themeActive ? "#A445ED" : "#838383"}
+        width="12"
+        height="20"
       />
     </div>
-  );
-};
-
-export const Icon = ({ name, color = "", clase = "" }) => {
-  return (
-    <>
-      {name === "icon-moon" && (
-        <svg
-          className={clase}
-          xmlns="http://www.w3.org/2000/svg"
-          width="19.99"
-          height="20"
-          viewBox="0 0 22 22"
-        >
-          <path
-            fill="none"
-            stroke={color}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.5"
-            d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"
-          />
-        </svg>
-      )}
-
-      {name === "icon-arrow" && (
-        <svg
-          className={clase}
-          xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="8"
-          viewBox="0 0 14 8"
-        >
-          <path fill="none" stroke={color} strokeWidth="1.5" d="m1 1 6 6 6-6" />
-        </svg>
-      )}
-    </>
   );
 };
