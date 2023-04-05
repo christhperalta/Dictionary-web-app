@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Icons } from "../Icons/Icons";
 import "./Header.scss";
 
 export const Header = ({ handleToggle, themeActive }) => {
@@ -19,9 +18,7 @@ export const Logo = () => {
   return (
     <h1 className="Header-h1">
       <a href="#" className="Header-a">
-        {/* <img className="Header-img" src="assets/images/logo.svg" alt="logo" />
-         */}
-        <Icons name="icon-logo" width="28.05" height="32" />
+        <img src="/public/assets/images/logo.svg" alt="logo" />
       </a>
     </h1>
   );
@@ -37,13 +34,19 @@ export const DropDown = ({ themeActive }) => {
     <div className="Header-dropdown">
       <button className="Header-dropdown-button" onClick={handleToggle}>
         Mono
-        <Icons
-          name="icon-arrow"
-          clase={`Header-arrowSvg ${isActive ? "isActive" : ""}`}
-          color={themeActive ? "#A445ED" : "#838383"}
-          width="12"
-          height="6"
-        />
+        {themeActive ? (
+          <img
+            className={`Header-arrow ${isActive ? "isActive" : ""}`}
+            src="assets/images/icon-arrow-down-m.svg"
+            alt="arrow-down"
+          />
+        ) : (
+          <img
+            className={`Header-arrow ${isActive ? "isActive" : ""}`}
+            src="assets/images/icon-arrow-down.svg"
+            alt="arrow-down"
+          />
+        )}
       </button>
 
       <div
@@ -76,13 +79,19 @@ export const ToggleSwitch = ({ handleToggle, themeActive }) => {
           className={`Header-slider ${themeActive ? "isActive" : ""}`}
         ></span>
       </label>
-      <Icons
-        clase="Header-themes-svg"
-        name="icon-moon"
-        color={themeActive ? "#A445ED" : "#838383"}
-        width="12"
-        height="20"
-      />
+      {themeActive ? (
+        <img
+          className="Header-moon"
+          src="assets/images/icon-moon-m.svg"
+          alt="icon-moon"
+        />
+      ) : (
+        <img
+          className="Header-moon"
+          src="assets/images/icon-moon.svg"
+          alt="icon-moon"
+        />
+      )}
     </div>
   );
 };

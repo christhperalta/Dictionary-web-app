@@ -1,5 +1,4 @@
 import "./Main.scss";
-import { Icons } from "../Icons/Icons";
 
 export const Main = ({ themeActive }) => {
   return (
@@ -18,7 +17,7 @@ export const Form = ({ themeActive }) => {
         type="text"
       />
       <button className="Main-button" type="submit">
-        <Icons name="icon-search" width="15.55" height="15.55" />
+        <img src="assets/images/icon-search.svg" alt="" />
       </button>
     </form>
   );
@@ -32,13 +31,8 @@ export const WordMening = ({ themeActive }) => {
           keyboard
           <span className="Main-span">/ˈkiːbɔːd/</span>
         </h2>
-        <button>
-          <Icons
-            name="icon-play"
-            clase="Main-iconPlay"
-            width="48"
-            height="48"
-          />
+        <button className="Main-button-play">
+          <img src="assets/images/icon-play.svg" alt="" />
         </button>
       </header>
       <section className="Main-section">
@@ -93,9 +87,11 @@ export const WordMening = ({ themeActive }) => {
         <h5 className="Main-footer-h5">Source</h5>
         <p className="Main-footer-p">
           https://en.wiktionary.org/wiki/keyboard
-          <span>
-            <Icons name="icon-window" width="12" height="12" />
-          </span>
+          <img
+            className="Main-iconWindow"
+            src="assets/images/icon-new-window.svg"
+            alt=""
+          />
         </p>
       </footer>
     </article>

@@ -17,11 +17,10 @@
     font-size: 1rem;
     padding: 1rem 3rem 1rem 1.5rem;
     outline: none;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease;
   }
   &-button {
     position: absolute;
-
     top: 1rem;
     right: 1.25rem;
     cursor: pointer;
@@ -49,6 +48,10 @@
     font-size: initial;
     font-weight: initial;
     color: var(--ninth-color);
+  }
+
+  &-button-play {
+    width: 3rem;
   }
 
   &-section {
@@ -164,12 +167,18 @@
     font-weight: 700;
     line-height: 0.9181rem;
   }
+
+  &-iconWindow {
+    width: 0.75rem;
+  }
 }
 
 .Main-input.isActive {
   background-color: var(--second-color);
+  transition: all 0.3s ease;
 }
 
 .hr-theme {
   background-color: var(--forth-color);
+  transition: all 0.3s ease-in-out;
 }
