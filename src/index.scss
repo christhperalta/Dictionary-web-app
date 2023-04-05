@@ -9,6 +9,9 @@
   --eighth-color: #ffffff;
   --ninth-color: #a445ed;
   --tenth-color: #ff5252;
+  --inconsolata: "Inconsolata", monospace;
+  --inter: "Inter", sans-serif;
+  --serif: "Lora", serif;
 }
 
 /* Reseteamos los margin y paddings de todas las etiquetas */
@@ -136,6 +139,7 @@ svg {
 body {
   min-height: 100vh;
   font-size: 100%;
+  // font-family: "Lora", serif;
 
   /* (Opcional) */
   hyphens: auto;
@@ -145,4 +149,22 @@ body {
   -webkit-font-smoothing: antialiased;
   /* (Opcional) */
   -moz-osx-font-smoothing: grayscale;
+}
+
+.darkTheme {
+  background-color: var(--first-color);
+  color: var(--eighth-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.sansSerif {
+  font-family: var(--inter);
+}
+
+.serif {
+  font-family: var(--serif);
+}
+
+.inconsolata {
+  font-family: var(--inconsolata);
 }

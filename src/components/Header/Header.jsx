@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.scss";
 
 export const Header = ({ handleToggle, themeActive }) => {
@@ -26,14 +26,41 @@ export const Logo = () => {
 
 export const DropDown = ({ themeActive }) => {
   const [isActive, setIsActive] = useState(false);
+  const [font, setFont] = useState("serif");
 
   const handleToggle = () => {
     setIsActive(!isActive);
   };
+
+  const handleFontsTypes = (type) => {
+    setFont(type);
+  };
+
+  useEffect(() => {
+    const body = document.querySelector("body");
+
+    if (font === "sansSerif") {
+      body.classList.remove("inconsolata") || body.classList.remove("serif");
+      body.classList.add("sansSerif");
+    }
+    if (font === "serif") {
+      body.classList.remove("inconsolata") ||
+        body.classList.remove("sansSerif");
+      body.classList.add("serif");
+    }
+
+    if (font === "inconsolata") {
+      body.classList.remove("sansSerif") || body.classList.remove("serif");
+      body.classList.add("inconsolata");
+    }
+  }, [font]);
+
   return (
     <div className="Header-dropdown">
       <button className="Header-dropdown-button" onClick={handleToggle}>
-        Mono
+        {font === "sansSerif" && "Sant Serif"}
+        {font === "serif" && "Serif"}
+        {font === "inconsolata" && "Mono"}
         {themeActive ? (
           <img
             className={`Header-arrow ${isActive ? "isActive" : ""}`}
@@ -56,13 +83,28 @@ export const DropDown = ({ themeActive }) => {
       >
         <ul>
           <li className="Header-li">
-            <button className="Header-dropdown-ul-button">Sans Serif</button>
+            <button
+              className="Header-dropdown-ul-button sansSerif"
+              onClick={() => handleFontsTypes("sansSerif")}
+            >
+              Sans Serif
+            </button>
           </li>
           <li className="Header-li">
-            <button className="Header-dropdown-ul-button">Mono</button>
+            <button
+              className="Header-dropdown-ul-button serif"
+              onClick={() => handleFontsTypes("serif")}
+            >
+              Serif
+            </button>
           </li>
           <li className="Header-li">
-            <button className="Header-dropdown-ul-button">Serif</button>
+            <button
+              className="Header-dropdown-ul-button incorsolata"
+              onClick={() => handleFontsTypes("inconsolata")}
+            >
+              Mono
+            </button>
           </li>
         </ul>
       </div>
