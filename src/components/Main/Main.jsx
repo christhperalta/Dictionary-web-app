@@ -17,7 +17,7 @@ export const Form = ({ themeActive }) => {
         type="text"
       />
       <button className="Main-button" type="submit">
-        <img src="assets/images/icon-search.svg" alt="" />
+        <img src="assets/images/icon-search.svg" alt="icon-search" />
       </button>
     </form>
   );
@@ -90,7 +90,7 @@ export const WordMening = ({ themeActive }) => {
           <img
             className="Main-iconWindow"
             src="assets/images/icon-new-window.svg"
-            alt=""
+            alt="icon-new-window"
           />
         </p>
       </footer>
