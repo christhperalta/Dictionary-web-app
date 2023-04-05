@@ -18,7 +18,7 @@ export const Logo = () => {
   return (
     <h1 className="Header-h1">
       <a href="#" className="Header-a">
-        <img src="/public/assets/images/logo.svg" alt="logo" />
+        <img src="assets/images/logo.svg" alt="logo" />
       </a>
     </h1>
   );
