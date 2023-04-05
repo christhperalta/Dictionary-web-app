@@ -5,7 +5,7 @@ export const Main = ({ themeActive }) => {
   return (
     <main className="Main">
       <Form themeActive={themeActive} />
-      <WordMening />
+      <WordMening themeActive={themeActive} />
     </main>
   );
 };
@@ -24,7 +24,7 @@ export const Form = ({ themeActive }) => {
   );
 };
 
-export const WordMening = () => {
+export const WordMening = ({ themeActive }) => {
   return (
     <article className="Main-article">
       <header className="Main-header">
@@ -44,7 +44,7 @@ export const WordMening = () => {
       <section className="Main-section">
         <header className="Main-section-header">
           <h3 className="Main-section-h3">noun</h3>
-          <hr className="Main-section-hr" />
+          <hr className={`Main-section-hr ${themeActive ? "hr-theme" : ""}`} />
         </header>
         <h4 className="Main-section-h4">Meaning</h4>
         <ul className="Main-section-ul">
@@ -76,7 +76,7 @@ export const WordMening = () => {
       <section className="Main-section">
         <header className="Main-header">
           <h3 className="Main-section-h3">verb</h3>
-          <hr className="Main-section-hr" />
+          <hr className={`Main-section-hr ${themeActive ? "hr-theme" : ""}`} />
         </header>
         <h4 className="Main-section-h4">Meaning</h4>
         <ul className="Main-section-ul">
@@ -88,7 +88,7 @@ export const WordMening = () => {
           </li>
         </ul>
       </section>
-      <hr className="Main-hr" />
+      <hr className={`Main-hr ${themeActive ? "hr-theme" : ""}`} />
       <footer className="Main-footer">
         <h5 className="Main-footer-h5">Source</h5>
         <p className="Main-footer-p">
