@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Icons } from "../Icons/Icons";
 import "./Header.scss";
 
 export const Header = ({ handleToggle, themeActive }) => {
@@ -19,9 +18,13 @@ export const Logo = () => {
   return (
     <h1 className="Header-h1">
       <a href="#" className="Header-a">
+<<<<<<< HEAD
         <span>
           <Icons name="icon-logo" width="28.05" height="32" />
         </span>
+=======
+        <img src="/public/assets/images/logo.svg" alt="logo" />
+>>>>>>> christh-peralta
       </a>
     </h1>
   );
@@ -37,6 +40,7 @@ export const DropDown = ({ themeActive }) => {
     <div className="Header-dropdown">
       <button className="Header-dropdown-button" onClick={handleToggle}>
         Mono
+<<<<<<< HEAD
         <span>
           <Icons
             name="icon-arrow"
@@ -46,6 +50,21 @@ export const DropDown = ({ themeActive }) => {
             height="6"
           />
         </span>
+=======
+        {themeActive ? (
+          <img
+            className={`Header-arrow ${isActive ? "isActive" : ""}`}
+            src="assets/images/icon-arrow-down-m.svg"
+            alt="arrow-down"
+          />
+        ) : (
+          <img
+            className={`Header-arrow ${isActive ? "isActive" : ""}`}
+            src="assets/images/icon-arrow-down.svg"
+            alt="arrow-down"
+          />
+        )}
+>>>>>>> christh-peralta
       </button>
 
       <div
@@ -78,6 +97,7 @@ export const ToggleSwitch = ({ handleToggle, themeActive }) => {
           className={`Header-slider ${themeActive ? "isActive" : ""}`}
         ></span>
       </label>
+<<<<<<< HEAD
       <span>
         <Icons
           clase="Header-themes-svg"
@@ -87,6 +107,21 @@ export const ToggleSwitch = ({ handleToggle, themeActive }) => {
           height="20"
         />
       </span>
+=======
+      {themeActive ? (
+        <img
+          className="Header-moon"
+          src="assets/images/icon-moon-m.svg"
+          alt="icon-moon"
+        />
+      ) : (
+        <img
+          className="Header-moon"
+          src="assets/images/icon-moon.svg"
+          alt="icon-moon"
+        />
+      )}
+>>>>>>> christh-peralta
     </div>
   );
 };
