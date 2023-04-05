@@ -34,17 +34,6 @@ export const DropDown = ({ themeActive }) => {
     <div className="Header-dropdown">
       <button className="Header-dropdown-button" onClick={handleToggle}>
         Mono
-<<<<<<< HEAD
-        <span>
-          <Icons
-            name="icon-arrow"
-            clase={`Header-arrowSvg ${isActive ? "isActive" : ""}`}
-            color={themeActive ? "#A445ED" : "#838383"}
-            width="12"
-            height="6"
-          />
-        </span>
-=======
         {themeActive ? (
           <img
             className={`Header-arrow ${isActive ? "isActive" : ""}`}
@@ -58,7 +47,6 @@ export const DropDown = ({ themeActive }) => {
             alt="arrow-down"
           />
         )}
->>>>>>> christh-peralta
       </button>
 
       <div
@@ -91,17 +79,6 @@ export const ToggleSwitch = ({ handleToggle, themeActive }) => {
           className={`Header-slider ${themeActive ? "isActive" : ""}`}
         ></span>
       </label>
-<<<<<<< HEAD
-      <span>
-        <Icons
-          clase="Header-themes-svg"
-          name="icon-moon"
-          color={themeActive ? "#A445ED" : "#838383"}
-          width="12"
-          height="20"
-        />
-      </span>
-=======
       {themeActive ? (
         <img
           className="Header-moon"
@@ -115,7 +92,6 @@ export const ToggleSwitch = ({ handleToggle, themeActive }) => {
           alt="icon-moon"
         />
       )}
->>>>>>> christh-peralta
     </div>
   );
 };
