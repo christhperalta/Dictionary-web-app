@@ -33,12 +33,14 @@ export const WordMening = ({ themeActive }) => {
           <span className="Main-span">/ˈkiːbɔːd/</span>
         </h2>
         <button>
-          <Icons
-            name="icon-play"
-            clase="Main-iconPlay"
-            width="48"
-            height="48"
-          />
+          <span>
+            <Icons
+              name="icon-play"
+              clase="Main-iconPlay"
+              width="48"
+              height="48"
+            />
+          </span>
         </button>
       </header>
       <section className="Main-section">

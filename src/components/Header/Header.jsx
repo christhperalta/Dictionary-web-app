@@ -19,9 +19,9 @@ export const Logo = () => {
   return (
     <h1 className="Header-h1">
       <a href="#" className="Header-a">
-        {/* <img className="Header-img" src="assets/images/logo.svg" alt="logo" />
-         */}
-        <Icons name="icon-logo" width="28.05" height="32" />
+        <span>
+          <Icons name="icon-logo" width="28.05" height="32" />
+        </span>
       </a>
     </h1>
   );
@@ -37,13 +37,15 @@ export const DropDown = ({ themeActive }) => {
     <div className="Header-dropdown">
       <button className="Header-dropdown-button" onClick={handleToggle}>
         Mono
-        <Icons
-          name="icon-arrow"
-          clase={`Header-arrowSvg ${isActive ? "isActive" : ""}`}
-          color={themeActive ? "#A445ED" : "#838383"}
-          width="12"
-          height="6"
-        />
+        <span>
+          <Icons
+            name="icon-arrow"
+            clase={`Header-arrowSvg ${isActive ? "isActive" : ""}`}
+            color={themeActive ? "#A445ED" : "#838383"}
+            width="12"
+            height="6"
+          />
+        </span>
       </button>
 
       <div
@@ -76,13 +78,15 @@ export const ToggleSwitch = ({ handleToggle, themeActive }) => {
           className={`Header-slider ${themeActive ? "isActive" : ""}`}
         ></span>
       </label>
-      <Icons
-        clase="Header-themes-svg"
-        name="icon-moon"
-        color={themeActive ? "#A445ED" : "#838383"}
-        width="12"
-        height="20"
-      />
+      <span>
+        <Icons
+          clase="Header-themes-svg"
+          name="icon-moon"
+          color={themeActive ? "#A445ED" : "#838383"}
+          width="12"
+          height="20"
+        />
+      </span>
     </div>
   );
 };
