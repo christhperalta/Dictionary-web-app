@@ -38,9 +38,11 @@
     flex-flow: row nowrap;
     align-items: center;
     gap: 1rem;
+    font-weight: 700;
   }
 
   &-arrow {
+    width: 12px;
     transition: 0.3s ease-in-out;
   }
 
@@ -56,6 +58,7 @@
 
   &-dropdown-ul-button {
     font-size: 18px;
+    font-weight: 700;
   }
   &-li:nth-child(1),
   &-li:nth-child(2) {
@@ -141,4 +144,16 @@
 
 .Header-slider.isActive::before {
   transform: translateX(20px);
+}
+
+.sansSerif {
+  font-family: var(--inter);
+}
+
+.sefir {
+  font-family: var(--lora);
+}
+
+.incorsolata {
+  font-family: var(--inconsolata);
 }
