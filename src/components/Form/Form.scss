@@ -1,0 +1,47 @@
+.Form {
+  display: flex;
+  width: 100%;
+
+  &-div {
+    position: relative;
+    width: 100%;
+    background-color: var(--seventh-color);
+    padding: 0.875rem 3.75rem 0.9375rem 1.5rem;
+
+    border-radius: 1rem;
+  }
+
+  &-div:hover {
+    outline: 1px solid #a445ed;
+  }
+
+  &-input {
+    width: 100%;
+    // padding: 0.875rem 3.75rem 0.9375rem 1.5rem;
+    // border-radius: 1rem;
+    background-color: var(--seventh-color);
+    font-weight: 700;
+    line-height: 1.21rem;
+    font-size: 1.1875rem;
+    outline: none;
+    color: var(--third-color);
+    opacity: 0.25;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &-input:hover {
+    color: var(--third-color);
+    opacity: 1;
+  }
+
+  &-button {
+    position: absolute;
+    top: 15px;
+    right: 23px;
+  }
+
+  &-search {
+    width: 1.5rem;
+  }
+}
