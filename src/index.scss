@@ -1,4 +1,5 @@
 :root {
+  // Colors
   --first-color: #050505;
   --second-color: #1f1f1f;
   --third-color: #2d2d2d;
@@ -9,12 +10,8 @@
   --eighth-color: #ffffff;
   --ninth-color: #a445ed;
   --tenth-color: #ff5252;
-  --inconsolata: "Inconsolata", monospace;
-  --inter: "Inter", sans-serif;
-  --serif: "Lora", serif;
 }
 
-/* Reseteamos los margin y paddings de todas las etiquetas */
 *,
 *::before,
 *::after {
@@ -29,7 +26,6 @@
   display: block;
 }
 
-/* Evitamos problemas con las imagenes */
 img,
 picture,
 video,
@@ -44,29 +40,25 @@ figure {
   object-position: center center;
 }
 
-/* Reseteamos los enlaces para funcionar como cajas... */
 a {
   display: block;
   text-decoration: none;
   color: inherit;
   font-size: inherit;
 }
-/* ... excepto los que se encuentran en párrafos */
+
 p a {
   display: inline;
 }
 
-/* Quitamos los puntos de los <li> */
 li {
   list-style-type: none;
 }
 
-/* (Opcional) Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
 }
 
-/* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1,
 h2,
 h3,
@@ -88,7 +80,7 @@ em {
   text-decoration: none;
   color: inherit;
 }
-/* Evitamos problemas con los pseudoelementos de quotes */
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -97,13 +89,11 @@ q:after {
   content: none;
 }
 
-/* (Opcional) Configuramos el texto que seleccionamos */
 ::selection {
   background-color: var(--negro);
   color: var(--blanco);
 }
 
-/* Nivelamos problemas de tipografías y colocación de formularios */
 form,
 input,
 textarea,
@@ -120,7 +110,6 @@ label {
   appearance: none;
 }
 
-/* Reseteamos las tablas */
 table,
 tr,
 td {
@@ -128,27 +117,19 @@ td {
   border-spacing: 0;
 }
 
-/* Evitamos problemas con los SVG */
 svg {
   width: 100%;
-  display: block;
+  display: inline;
   fill: currentColor;
 }
 
-/* Configuramos la tipografía para toda la web */
 body {
   min-height: 100vh;
   font-size: 100%;
-  // font-family: "Lora", serif;
-
-  /* (Opcional) */
-  hyphens: auto;
-  /* (Opcional) */
-  font-smooth: always;
-  /* (Opcional) */
-  -webkit-font-smoothing: antialiased;
-  /* (Opcional) */
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
+  background-color: var(--eighth-color);
+  color: var(--first-color);
+  transition: all 0.3s ease-in-out;
 }
 
 .darkTheme {
@@ -157,14 +138,10 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.sansSerif {
-  font-family: var(--inter);
+.Main {
+  margin: 0 1.5rem 0 1.5rem;
 }
 
-.serif {
-  font-family: var(--serif);
-}
-
-.inconsolata {
-  font-family: var(--inconsolata);
-}
+// font-family: 'Inconsolata', monospace;
+// font-family: 'Inter', sans-serif;
+// font-family: 'Lora', serif;
