@@ -1,8 +1,16 @@
 import { v4 as uuidv4 } from "uuid";
 import { Icon } from "../common/Icon";
+import { Definitions } from "./Definitions";
 import "./Word.scss";
 
-export const Word = ({ word, phonetic, url, nDefinition, vDefinition }) => {
+export const Word = ({
+  word,
+  phonetic,
+  url,
+  nDefinition,
+  vDefinition,
+  darkTheme,
+}) => {
   return (
     <article className="Word">
       <header className="Word-header">
@@ -16,7 +24,7 @@ export const Word = ({ word, phonetic, url, nDefinition, vDefinition }) => {
       </header>
       <div className="Word-noun">
         <p className="Word-p">{nDefinition?.partOfSpeech}</p>
-        <hr className="Word-hr" />
+        <hr className={`Word-hr ${darkTheme ? "dark-hr" : ""}`} />
       </div>
 
       <section className="Word-section">
@@ -37,7 +45,7 @@ export const Word = ({ word, phonetic, url, nDefinition, vDefinition }) => {
       </section>
       <div className="Word-verb">
         <p className="Word-p">{vDefinition?.partOfSpeech}</p>
-        <hr className="Word-hr" />
+        <hr className={`Word-hr ${darkTheme ? "dark-hr" : ""}`} />
       </div>
       <section className="Word-section">
         <h4 className="Word-h4">Meaning</h4>
@@ -51,7 +59,7 @@ export const Word = ({ word, phonetic, url, nDefinition, vDefinition }) => {
           ))}
         </ul>
       </section>
-      <hr className="Word-hr Word-hr-m" />
+      <hr className={`Word-hr Word-hr-m ${darkTheme ? "dark-hr" : ""}`} />
       <footer className="Word-footer">
         <h5 className="Word-h5">Source</h5>
         <div className="Word-footer-div">
@@ -62,14 +70,5 @@ export const Word = ({ word, phonetic, url, nDefinition, vDefinition }) => {
         </div>
       </footer>
     </article>
-  );
-};
-
-export const Definitions = ({ definition, example }) => {
-  return (
-    <li className="Word-li">
-      <p className="Word-li-p">{definition}</p>
-      {example ? <p className="Word-exanple">"{example}"</p> : ""}
-    </li>
   );
 };

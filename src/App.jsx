@@ -1,27 +1,8 @@
 import { useEffect, useState } from "react";
+import { Form, Header, Word } from "./components";
+import { fetchWords } from "./helper/fetWords";
 import "./App.scss";
-import { Form } from "./components/Form/Form";
-import { Header } from "./components/Header/Header";
-import { Word } from "./components/Word/Word";
-
 const body = document.querySelector("body");
-
-const fetchWords = async (words) => {
-  const response = await fetch(
-    `https://api.dictionaryapi.dev/api/v2/entries/en/${words}`
-  );
-  const data = await response.json();
-  const meanings = data.map((item) => {
-    return {
-      word: item.word,
-      phonetic: item.phonetic,
-      nDefinition: item.meanings[0],
-      vDefinition: item.meanings[1],
-      url: item.sourceUrls[0],
-    };
-  });
-  return meanings[0];
-};
 
 const App = () => {
   const [newWord, setNewWord] = useState("");
@@ -51,6 +32,7 @@ const App = () => {
 
   useEffect(() => {
     if (newWord === "") return;
+
     dictionaryApi();
   }, [newWord]);
 
@@ -58,8 +40,8 @@ const App = () => {
     <div className="App">
       <Header handleToggle={handleToggle} darkTheme={darkTheme} />
       <div className="Main">
-        <Form handleGetWord={handleGetWord} />
-        {meanings ? <Word {...meanings} /> : null}
+        <Form handleGetWord={handleGetWord} darkTheme={darkTheme} />
+        {meanings && <Word {...meanings} darkTheme={darkTheme} />}
       </div>
     </div>
   );

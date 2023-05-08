@@ -10,6 +10,10 @@
   --eighth-color: #ffffff;
   --ninth-color: #a445ed;
   --tenth-color: #ff5252;
+  // Fonts
+  --incorsolata: "Inconsolata", monospace;
+  --inter: "Inter", sans-serif;
+  --lora: "Lora", serif;
 }
 
 *,
@@ -126,10 +130,21 @@ svg {
 body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: "Inter", sans-serif;
   background-color: var(--eighth-color);
   color: var(--first-color);
   transition: all 0.3s ease-in-out;
+}
+
+.Sans-Serif {
+  font-family: var(--inter);
+}
+
+.Serif {
+  font-family: var(--lora);
+}
+
+.Mono {
+  font-family: var(--incorsolata);
 }
 
 .darkTheme {
@@ -138,10 +153,10 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.dark-hr {
+  background-color: var(--forth-color);
+}
+
 .Main {
   margin: 0 1.5rem 0 1.5rem;
 }
-
-// font-family: 'Inconsolata', monospace;
-// font-family: 'Inter', sans-serif;
-// font-family: 'Lora', serif;

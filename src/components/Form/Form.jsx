@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Icon } from "../common/Icon";
 import "./Form.scss";
 
-export const Form = ({ handleGetWord }) => {
+export const Form = ({ handleGetWord, darkTheme }) => {
   const [input, setInput] = useState("");
 
   const onInputChange = ({ target }) => {
@@ -18,19 +18,17 @@ export const Form = ({ handleGetWord }) => {
   };
 
   return (
-    <form className="Form" onSubmit={onFormSubmit}>
-      <div className="Form-div">
-        <input
-          className="Form-input"
-          type="text"
-          placeholder="Search for any word..."
-          value={input}
-          onChange={onInputChange}
-        />
-        <button className="Form-button">
-          <Icon name="search" clase="Form-search" />
-        </button>
-      </div>
+    <form className={`Form ${darkTheme ? "dark" : ""}`} onSubmit={onFormSubmit}>
+      <input
+        className="Form-input"
+        type="text"
+        placeholder="Search for any word..."
+        value={input}
+        onChange={onInputChange}
+      />
+      <button className="Form-button">
+        <Icon name="search" clase="Form-search" />
+      </button>
     </form>
   );
 };
