@@ -8,7 +8,7 @@ This is a solution to the [Dictionary web app challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://christhperalta.github.io/Dictionary-web-app/)
 
 ## My process
 
