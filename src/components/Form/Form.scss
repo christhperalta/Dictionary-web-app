@@ -1,39 +1,41 @@
 .Form {
+  position: relative;
   display: flex;
   width: 100%;
+  padding: 0.875rem 3.75rem 0.9375rem 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--seventh-color);
+  color: var(--third-color);
+  transition: 0.2s ease;
 
-  &-div {
-    position: relative;
-    width: 100%;
-    background-color: var(--seventh-color);
-    padding: 0.875rem 3.75rem 0.9375rem 1.5rem;
+  // &-div {
+  //   position: relative;
+  //   width: 100%;
+  //   background-color: var(--seventh-color);
+  //   padding: 0.875rem 3.75rem 0.9375rem 1.5rem;
 
-    border-radius: 1rem;
-  }
-
-  &-div:hover {
-    outline: 1px solid #a445ed;
-  }
+  //   border-radius: 1rem;
+  // }
 
   &-input {
     width: 100%;
     // padding: 0.875rem 3.75rem 0.9375rem 1.5rem;
     // border-radius: 1rem;
-    background-color: var(--seventh-color);
+    // background-color: var(--seventh-color);
     font-weight: 700;
     line-height: 1.21rem;
     font-size: 1.1875rem;
     outline: none;
-    color: var(--third-color);
-    opacity: 0.25;
+    // color: var(--third-color);
+    // opacity: 0.25;
     overflow: hidden;
     cursor: pointer;
   }
 
-  &-input:hover {
-    color: var(--third-color);
-    opacity: 1;
-  }
+  // &-input:hover {
+  //   color: var(--third-color);
+  //   opacity: 1;
+  // }
 
   &-button {
     position: absolute;
@@ -44,4 +46,13 @@
   &-search {
     width: 1.5rem;
   }
+}
+
+.Form:hover {
+  outline: 1px solid #a445ed;
+}
+
+.dark {
+  background-color: var(--second-color);
+  color: var(--eighth-color);
 }

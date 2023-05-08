@@ -1,4 +1,5 @@
 .Word {
+  position: relative;
   width: 100%;
   margin-top: 1.5rem;
   &-header {
@@ -53,8 +54,24 @@
   }
   &-ul {
     display: flex;
+    padding-left: 1.375rem;
     flex-flow: column nowrap;
     gap: 0.8125rem;
+  }
+
+  &-li {
+    position: relative;
+  }
+
+  &-li::before {
+    content: "";
+    position: absolute;
+    left: -1.25rem;
+    top: 0.5rem;
+    width: 0.3125rem;
+    height: 0.3125rem;
+    border-radius: 50%;
+    background-color: violet;
   }
 
   &-li-p {
@@ -114,5 +131,17 @@
 
   &-new-play {
     width: 3rem;
+  }
+}
+
+@media screen and (min-width: 37.5rem) {
+  .Word {
+    &-hr {
+      width: 91%;
+    }
+
+    &-hr-m {
+      width: 100%;
+    }
   }
 }
