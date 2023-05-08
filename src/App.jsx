@@ -5,7 +5,7 @@ import "./App.scss";
 const body = document.querySelector("body");
 
 const App = () => {
-  const [newWord, setNewWord] = useState("");
+  const [newWord, setNewWord] = useState("keyboard");
   const [meanings, setMeanings] = useState(false);
   const [darkTheme, setDarkTheme] = useState(false);
 
